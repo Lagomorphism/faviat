@@ -1,0 +1,40 @@
+﻿.white {
+    color: #FFF;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.f_1 {
+    font-size: 1em;
+}
+
+.lh_1 {
+    line-height: 1.8em;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.text_right {
+    text-align: right;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.error {
+    color: red;
+    font-size: .75em;
+    margin-left: .4em;
+}
+
+.val_summary_style {
+    color: red;
+    font-size: .8em;
+    margin-left: -1em;
+}
+

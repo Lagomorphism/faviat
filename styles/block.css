@@ -1,0 +1,131 @@
+﻿.clear {
+    clear: both;
+}
+.container {
+    margin: auto;
+    height: auto;
+    min-height: 100%;
+}
+.jump_1 {
+    margin-top: .5em;
+}
+.jump_2 {
+    margin-top: .1em;
+}
+.left {
+    float: left;
+}
+.w_1 {
+    width: 215px;
+}
+.w_2 {
+    width: 185px;
+}
+
+
+
+.header {
+    width: 100%;
+    margin: auto;
+    clear: both;
+    background-color: #000;
+    background-repeat: no-repeat;
+}
+    .header .wrapper {
+        width: 1024px;
+        margin: auto;
+        clear: both;
+    }
+        .header .wrapper .logo {
+            padding: 1em;
+            margin-right: 10em;
+        }
+        .header .wrapper .social {
+            padding: .3em;
+            float: left;
+        }
+        .header .wrapper .header_log {
+            margin-left: 5em;
+        }
+        .header .wrapper .header_right {
+            margin-left: 1em;
+        }
+
+
+
+
+
+.content {
+    width: 100%;
+    margin: auto;
+    clear: both;
+}
+    .content .wrapper {
+        width: 1024px;
+        margin: 1em auto;
+        clear: both;
+    }
+        .content .wrapper .login {
+            width: 300px;
+            margin: 8em auto;
+            background-color: #E9E9E9;
+            border-radius: 10px;
+            padding: 1em;
+            -webkit-box-shadow: 10px 10px 10px #888888;
+            box-shadow: 10px 10px 10px #888888;
+        }
+            .content .wrapper .login fieldset {
+                margin: auto;
+                border: none;
+                width: 250px;
+            }
+                .content .wrapper .login fieldset legend {
+                    color: #000;
+                    font-size: 1.2em;
+                }
+        .content .wrapper .forgot {
+            width: 700px;
+            margin: 4em auto;
+            background-color: #E9E9E9;
+            border-radius: 10px;
+            padding: 1em;
+            -webkit-box-shadow: 10px 10px 10px #888888;
+            box-shadow: 10px 10px 10px #888888;
+        }
+                .content .wrapper .forgot fieldset {
+                    width: 615px;
+                }
+                    .content .wrapper .forgot fieldset legend {
+                        color: #000;
+                        font-size: 1.2em;
+                    }
+                
+            
+            
+        
+                
+            
+        
+    
+
+
+
+.footer {
+    width: 100%;
+    margin: auto;
+    clear: both;
+    background-color: #000;
+    background-repeat: no-repeat;
+}
+    .footer .wrapper {
+        width: 1024px;
+        margin: auto;
+        clear: both;
+    }
+        .footer .wrapper p {
+            font-size: .75em;
+            padding: 2em;
+        }
+    
+
+

@@ -1,0 +1,33 @@
+﻿.textbox {
+    font-size: 1em;
+    height: 1.5em;
+    padding: 1px;
+    text-indent: 5px;
+}
+
+.watermark {
+    color: #999;
+    font-style: italic;
+    font-size: 1em;
+    height: 1.5em;
+    padding: 1px;
+    text-indent: 5px;
+}
+
+.login_button {
+    font-size: 1em;
+    padding: .25em;
+    border: 2px solid #9B9B9B;
+    font-weight: bold;
+}
+
+.link_button {
+    border: none;
+    cursor: pointer;
+    background-color: #E9E9E9;
+    font-weight: bold;
+    font-size: 1em;
+    font-style: italic;
+    color: #0000FF;
+    margin-left: -.2em;
+}

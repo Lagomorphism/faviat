@@ -1,0 +1,130 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="site.master.cs" Inherits="masters_site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head id="Head1" runat="server">
+        <title>Faviat</title>
+        
+        <script src='<%= ResolveClientUrl("~/scripts/jquery-2.0.3.min.js") %>' type="text/javascript"></script>
+        <script src='<%= ResolveClientUrl("~/scripts/jquery.validate.js") %>' type="text/javascript"></script>
+        <script src='<%= ResolveClientUrl("~/scripts/jquery.validate.min.js") %>' type="text/javascript"></script>
+        <script src='<%= ResolveClientUrl("~/scripts/json2.min.js") %>' type="text/javascript"></script>
+        <script src='<%= ResolveClientUrl("~/scripts/jquery-ui-1.10.3.min.js") %>' type="text/javascript"></script>
+
+        <link href="../styles/common.css" rel="stylesheet" type="text/css" />
+        <link href="../styles/block.css" rel="stylesheet" type="text/css" />
+        <link href="../styles/control.css" rel="stylesheet" type="text/css" />
+        <link href="../styles/font.css" rel="stylesheet" type="text/css" />
+        <link href="../content/themes/base/minified/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+
+        <asp:ContentPlaceHolder id="head" runat="server"></asp:ContentPlaceHolder>
+    </head>
+    <body>
+        <form id="form1" runat="server">
+            <ajax:ToolkitScriptManager ID="script_manager" runat="server"></ajax:ToolkitScriptManager>
+            <div class="container">
+
+                <div class="header">
+                    <div class="wrapper">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="logo">
+                                            <a href="<%=Page.GetRouteUrl("home", new {}) %>"><img src='<%= ResolveClientUrl("~/resources/images/faviat_logo.png") %>' alt="logo" /></a>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <img src='<%= ResolveClientUrl("~/resources/images/header_dottedline_20x81.png") %>' alt="" />
+                                    </td>
+
+
+                                    <td>
+                                        <div class="social">
+                                            <cubelique:RolloverImageButton ID="rib_fb" runat="server" ImageUrl="~/resources/images/header_tag_fb_68x99.png" ImageOverUrl="~/resources/images/header_tag_fb_68x99_hover.png" PostBackUrl="http://www.facebook.com" />
+                                        </div>
+                                        <div class="social">
+                                            <cubelique:RolloverImageButton ID="rib_twitter" runat="server" ImageUrl="~/resources/images/header_tag_twitter_68x99.png" ImageOverUrl="~/resources/images/header_tag_twitter_68x99_hover.png" PostBackUrl="http://www.twitter.com" />
+                                        </div>
+                                        <div class="social">
+                                            <cubelique:RolloverImageButton ID="rib_rss" runat="server" ImageUrl="~/resources/images/header_tag_rss_68x99.png" ImageOverUrl="~/resources/images/header_tag_rss_68x99_hover.png" PostBackUrl="http://www.cubelique.com" />
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <img src='<%= ResolveClientUrl("~/resources/images/header_dottedline_20x81.png") %>' alt="" />
+                                    </td>
+
+                                    <asp:UpdatePanel ID="up_status" runat="server" UpdateMode="Conditional">
+                                        <ContentTemplate>
+                                            <asp:Panel ID="pnl_login_before" runat="server" Visible="false">
+                                                <td>
+                                                    <div class="header_log text_right">
+                                                        <div class="lh_1 clear jump_1">
+                                                            <span class="f_1 bold white italic">Are you a member?</span>
+                                                        </div>
+                                                        <div class="lh_1 clear jump_1">
+                                                            <span class="f_1 bold white italic">First time?</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="header_right">
+                                                        <div class="clear jump_1">
+                                                            <cubelique:RolloverImageButton ID="rib_login" runat="server" ImageUrl="~/resources/images/header_btn_login_80x21.png" ImageOverUrl="~/resources/images/header_btn_login_80x21_hover.png" OnClick="btn_Click" />
+                                                        </div>
+                                                        <div class="clear jump_1">
+                                                            <cubelique:RolloverImageButton ID="rib_signin" runat="server" ImageUrl="~/resources/images/header_btn_signin_80x21.png" ImageOverUrl="~/resources/images/header_btn_signin_80x21_hover.png" OnClick="btn_Click" />
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </asp:Panel>
+
+                                            <asp:Panel ID="pnl_login_after" runat="server" Visible="false">
+                                                <td>
+                                                    <fieldset>
+                                                        <legend>Welcome! <asp:Label ID="label_full_name" runat="server" /></legend>
+                                                        <asp:Literal ID="lit_login_msg" runat="server" />
+                                                        <div class="clear jump_1">
+                                                            <cubelique:RolloverImageButton ID="rib_gotomyaccount" runat="server" ImageUrl="~/resources/images/header_btn_gotoaccount_141x21.png" ImageOverUrl="~/resources/images/header_btn_gotoaccount_141x21_hover.png" OnClick="btn_Click" />
+                                                        </div>
+                                                    </fieldset>
+                                                </td>
+                                            </asp:Panel>
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="wrapper">
+                        <asp:UpdatePanel ID="up_center" runat="server" UpdateMode="Conditional">
+                            <ContentTemplate>
+                                <asp:ContentPlaceHolder id="body" runat="server"></asp:ContentPlaceHolder>
+                            </ContentTemplate>
+                            <Triggers>
+                                <asp:AsyncPostBackTrigger ControlID="rib_login" EventName="Click" />
+                                <asp:AsyncPostBackTrigger ControlID="rib_signin" EventName="Click" />
+                                <asp:AsyncPostBackTrigger ControlID="rib_gotomyaccount" EventName="Click" />
+                            </Triggers>
+                        </asp:UpdatePanel>
+                    </div>
+                </div>
+
+                <div class="footer">
+                    <div class="wrapper">
+                        <p class="white text_center italic bold">
+                            Copyright @ 2013 Cubelique, LLC. All Rights Reserved.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </body>
+</html>
