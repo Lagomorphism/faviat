@@ -6,6 +6,11 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+using Cubelique.Account.Base;
+using Account=Cubelique.Account.Business;
+using Cubelique.Question.Base;
+using Question=Cubelique.Question.Business;
+
 public partial class forgot : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
@@ -20,7 +25,8 @@ public partial class forgot : System.Web.UI.Page
         switch (id)
         {
             case "btn_submit":
-                int account_id = BusinessLayer.Check_Username_Existence(txt_forgot_password.Text);
+                int account_id = Account.BusinessLayer.Check_Username_Existence(txt_forgot_password.Text);
+                
                 if (account_id == 0)
                     LoadQuestions(txt_forgot_password.Text);
                 else
@@ -37,8 +43,8 @@ public partial class forgot : System.Web.UI.Page
 
     private void LoadQuestions(string email)
     {
-        tblQuestion q = BusinessLayer.Forgot_Password_Questions(email);
-
+        tblQuestion q = Question.BusinessLayer.Forgot_Password_Questions(email);
+        
         StringBuilder sb = new StringBuilder();
         lit_question.Text = sb.ToString();
 

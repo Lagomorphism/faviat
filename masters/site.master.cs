@@ -6,11 +6,13 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Text;
 
+using Cubelique.Account.Business;
+
 public partial class masters_site : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (BusinessLayer.Check_Login_Session())
+        if (Check_Login_Session() != 0)
         {
             pnl_login_before.Visible = false;
             pnl_login_after.Visible = true;
@@ -20,7 +22,7 @@ public partial class masters_site : System.Web.UI.MasterPage
             pnl_login_before.Visible = true;
             pnl_login_after.Visible = false;
 
-            LoadFieldSet();
+            //Load_FieldSet();
         }
     }
 
@@ -44,14 +46,21 @@ public partial class masters_site : System.Web.UI.MasterPage
         }
     }
 
-    private void LoadFieldSet()
+    private int Check_Login_Session()
     {
-        label_full_name.Text = BusinessLayer.Return_Full_Name();
+        int account_id = 0;
+        if (Session[Constant.ACCOUNT_ID] == null || Session[Constant.ACCOUNT_ID] == "0" || Session[Constant.ACCOUNT_ID] == string.Empty)
+            return account_id;
+        else
+            return Convert.ToInt32(Session[Constant.ACCOUNT_ID].ToString());
+    }
+
+    private void Load_FieldSet(int account_id, int profile_id)
+    {
+        label_full_name.Text = BusinessLayer.Return_Full_Name(profile_id);
 
         StringBuilder sb = new StringBuilder();
-
-        sb.Append("<span class='f_1 bold white italic'>Last Login: " + BusinessLayer.Return_Last_Login().ToString() + "</span>");
-
+        sb.Append("<span class='f_1 bold white italic'>Last Login: " + BusinessLayer.Return_Last_Login(account_id).ToString() + "</span>");
         lit_login_msg.Text = sb.ToString();
     }
 }
