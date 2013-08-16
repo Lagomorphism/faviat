@@ -22,6 +22,16 @@
     width: 185px;
 }
 
+.w_3 {
+    width: 605px;
+}
+
+.w_4 {
+    width: 300px;
+}
+
+
+
 
 
 .header {
@@ -92,13 +102,30 @@
             -webkit-box-shadow: 10px 10px 10px #888888;
             box-shadow: 10px 10px 10px #888888;
         }
-                .content .wrapper .forgot fieldset {
-                    width: 615px;
+            .content .wrapper .forgot fieldset {
+                width: 96%;
+            }
+                .content .wrapper .forgot fieldset legend {
+                    color: #000;
+                    font-size: 1.2em;
                 }
-                    .content .wrapper .forgot fieldset legend {
-                        color: #000;
-                        font-size: 1.2em;
-                    }
+        .content .wrapper .signup {
+            width: 800px;
+            margin: 2em auto;
+            background-color: #E9E9E9;
+            border-radius: 10px;
+            padding: 1em;
+            -webkit-box-shadow: 10px 10px 10px #888888;
+            box-shadow: 10px 10px 10px #888888;
+        }
+            .content .wrapper .signup fieldset {
+                width: 96%;
+            }
+                .content .wrapper .signup fieldset legend {
+                    color: #000;
+                    font-size: 1.2em;
+                }
+        
                 
             
             

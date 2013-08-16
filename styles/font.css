@@ -2,6 +2,10 @@
     color: #FFF;
 }
 
+.required {
+    color: red;
+}
+
 .bold {
     font-weight: bold;
 }
@@ -9,6 +13,15 @@
 .f_1 {
     font-size: 1em;
 }
+
+.f_2 {
+    font-size: .8em;
+}
+
+.f_3 {
+    font-size: .77em;
+}
+
 
 .lh_1 {
     line-height: 1.8em;

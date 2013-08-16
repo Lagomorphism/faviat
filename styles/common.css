@@ -22,11 +22,8 @@ a {
     }
 
 fieldset {
-    width: 20em;
-    margin-left: 2em;
 }
     fieldset legend {
-        color: #fff;
         font-weight: bold;
         font-style: italic;
     }
