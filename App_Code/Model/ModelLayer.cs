@@ -43,6 +43,13 @@ public class ModelLayer
 
         return p;
     }
+
+    public static List<tblAccountType> GetAccountTypes()
+    {
+        List<tblAccountType> ts = new List<tblAccountType>();
+
+        return ts;
+    }
     #endregion
 
     #region Question

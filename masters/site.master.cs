@@ -33,13 +33,13 @@ public partial class masters_site : System.Web.UI.MasterPage
         switch (id)
         {
             case "rib_login":
-                Response.Redirect("~/Login");
+                Response.RedirectToRoute("Login");
                 break;
             case "rib_signin":
-                Response.Redirect("~/Signup");
+                Response.RedirectToRoute("Signup");
                 break;
             case "rib_gotomyaccount":
-                Response.Redirect("~/MyProfile");
+                Response.RedirectToRoute("MyProfile");
                 break;
             default:
                 break;

@@ -18,7 +18,10 @@
         routes.MapPageRoute("signup", "Signup", "~/signup.aspx");
         routes.MapPageRoute("forgot", "Forgot", "~/forgot.aspx");
 
-        routes.MapPageRoute("defaultRoute", "{*value}", "~/default.aspx");
+        routes.MapPageRoute("error", "Error", "~/error.aspx");
+        routes.MapPageRoute("404", "404", "~/404.aspx");
+
+        //routes.MapPageRoute("defaultRoute", "{*value}", "~/default.aspx");
     }
     
     void Application_End(object sender, EventArgs e) 

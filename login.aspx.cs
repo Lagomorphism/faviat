@@ -20,12 +20,12 @@ public partial class login : System.Web.UI.Page
         switch (id)
         {
             case "btn_forget_password":
-                Response.Redirect("~/Forgot");
+                Response.RedirectToRoute("Forgot");
                 break;
             case "btn_login":
                 int accound_id = BusinessLayer.Login(txt_username.Text, txt_password.Text);
                 if (accound_id != 0)
-                    Response.Redirect("~/Home");
+                    Response.RedirectToRoute("Home");
                 else
                 {
                     StringBuilder sb = new StringBuilder();

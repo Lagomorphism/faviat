@@ -23,9 +23,9 @@ public partial class forgot : System.Web.UI.Page
         switch (id)
         {
             case "btn_check":
-                int account_id = BusinessLayer.Check_Username_Existence(txt_forgot_password.Text);
+                int exist_indicator = BusinessLayer.Check_Username_Existence(txt_forgot_password.Text);
 
-                if (account_id == 0)
+                if (exist_indicator == 0)
                 {
                     question_id = LoadQuestions(txt_forgot_password.Text);
                     pnl_email.Visible = false;
@@ -66,7 +66,7 @@ public partial class forgot : System.Web.UI.Page
                 }
                 break;
             case "btn_confirm":
-                Response.Redirect("~/Login");
+                Response.RedirectToRoute("Login");
                 break;
             default:
                 break;

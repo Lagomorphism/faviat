@@ -5,6 +5,18 @@
     text-indent: 5px;
 }
 
+.dropdown {
+    font-size: 1em;
+    height: 2em;
+    padding: 1px;
+}
+
+
+.round {
+    border-radius: 5px;
+}
+
+
 .watermark {
     color: #999;
     font-style: italic;
@@ -12,6 +24,17 @@
     height: 1.5em;
     padding: 1px;
     text-indent: 5px;
+}
+
+.BarBorder{
+	border-style: solid;
+	border-width: 1px;
+	width: 150px;
+}
+
+.BarIndicator{
+	color: orange;
+	background-color: orange;
 }
 
 .login_button {
