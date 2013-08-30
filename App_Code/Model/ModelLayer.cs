@@ -44,11 +44,18 @@ public class ModelLayer
         return p;
     }
 
+    public static tblAccountType GetAccountType(int iAccountType)
+    {
+        tblAccountType at = new tblAccountType();
+
+        return at;
+    }
+
     public static List<tblAccountType> GetAccountTypes()
     {
-        List<tblAccountType> ts = new List<tblAccountType>();
+        List<tblAccountType> ats = new List<tblAccountType>();
 
-        return ts;
+        return ats;
     }
     #endregion
 

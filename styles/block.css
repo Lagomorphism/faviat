@@ -1,23 +1,29 @@
 ﻿.clear {
     clear: both;
 }
+
 .container {
     margin: auto;
-    height: auto;
     min-height: 100%;
+    height: auto;
 }
+
 .jump_1 {
     margin-top: .5em;
 }
+
 .jump_2 {
     margin-top: .1em;
 }
+
 .left {
     float: left;
 }
+
 .w_1 {
     width: 215px;
 }
+
 .w_2 {
     width: 185px;
 }
@@ -30,33 +36,43 @@
     width: 300px;
 }
 
+.w_5 {
+    width: 97%;
+}
+
+
 
 
 
 
 .header {
-    width: 100%;
-    margin: auto;
     clear: both;
+    margin: auto;
+    width: 100%;
     background-color: #000;
     background-repeat: no-repeat;
 }
+
     .header .wrapper {
-        width: 1024px;
-        margin: auto;
         clear: both;
+        margin: auto;
+        width: 1024px;
     }
+
         .header .wrapper .logo {
-            padding: 1em;
             margin-right: 10em;
+            padding: 1em;
         }
+
         .header .wrapper .social {
-            padding: .3em;
             float: left;
+            padding: .3em;
         }
+
         .header .wrapper .header_log {
             margin-left: 5em;
         }
+
         .header .wrapper .header_right {
             margin-left: 1em;
         }
@@ -66,103 +82,208 @@
 
 
 .content {
-    width: 100%;
-    margin: auto;
     clear: both;
+    margin: auto;
+    width: 100%;
 }
+
     .content .wrapper {
-        width: 1024px;
-        margin: 1em auto;
         clear: both;
+        margin: 1em auto;
+        width: 1024px;
     }
+
         .content .wrapper .login {
-            width: 300px;
             margin: 8em auto;
-            background-color: #E9E9E9;
-            border-radius: 10px;
             padding: 1em;
+            width: 300px;
+            border-radius: 10px;
+            background-color: #E9E9E9;
             -webkit-box-shadow: 10px 10px 10px #888888;
             box-shadow: 10px 10px 10px #888888;
         }
+
             .content .wrapper .login fieldset {
                 margin: auto;
-                border: none;
                 width: 250px;
+                border: none;
             }
+
                 .content .wrapper .login fieldset legend {
                     color: #000;
                     font-size: 1.2em;
                 }
+
         .content .wrapper .forgot {
-            width: 700px;
             margin: 4em auto;
-            background-color: #E9E9E9;
-            border-radius: 10px;
             padding: 1em;
+            width: 700px;
+            border-radius: 10px;
+            background-color: #E9E9E9;
             -webkit-box-shadow: 10px 10px 10px #888888;
             box-shadow: 10px 10px 10px #888888;
         }
+
             .content .wrapper .forgot fieldset {
                 width: 96%;
             }
+
                 .content .wrapper .forgot fieldset legend {
                     color: #000;
                     font-size: 1.2em;
                 }
+
         .content .wrapper .signup {
-            width: 800px;
             margin: 2em auto;
-            background-color: #E9E9E9;
-            border-radius: 10px;
             padding: 1em;
+            width: 800px;
+            border-radius: 10px;
+            background-color: #E9E9E9;
             -webkit-box-shadow: 10px 10px 10px #888888;
             box-shadow: 10px 10px 10px #888888;
         }
+
             .content .wrapper .signup fieldset {
                 width: 96%;
             }
+
                 .content .wrapper .signup fieldset legend {
                     color: #000;
                     font-size: 1.2em;
                 }
+
         .content .wrapper .profile {
-            width: 900px;
             margin: 2em auto;
-            background-color: #E9E9E9;
-            border-radius: 10px;
             padding: 1em;
+            width: 900px;
+            border-radius: 10px;
+            background-color: #E9E9E9;
             -webkit-box-shadow: 10px 10px 10px #888888;
             box-shadow: 10px 10px 10px #888888;
         }
-                
-        
-                
-            
-            
-        
-                
-            
-        
-    
+
+            .content .wrapper .profile .table_profile {
+                width: 100%;
+            }
+
+                .content .wrapper .profile .table_profile .tbody_profile {
+                    width: 100%;
+                }
+
+                    .content .wrapper .profile .table_profile .tbody_profile .tr_profile {
+                    }
+
+                        .content .wrapper .profile .table_profile .tbody_profile .tr_profile .td_profile {
+                            width: 33%;
+                            vertical-align: top;
+                        }
+
+                            .content .wrapper .profile .table_profile .tbody_profile .tr_profile .td_profile .row {
+                                clear: both;
+                                margin-bottom: 3%;
+                                padding: 2%;
+                                width: 96.2%;
+                                background-color: #fff;
+                            }
+
+            .content .wrapper .profile .table_resume {
+                width: 100%;
+            }
+
+                .content .wrapper .profile .table_resume .tbody_resume {
+                    width: 100%;
+                }
+
+                    .content .wrapper .profile .table_resume .tbody_resume .tr_resume {
+                    }
+
+                        .content .wrapper .profile .table_resume .tbody_resume .tr_resume .td_resume {
+                            width: 100%%;
+                            vertical-align: top;
+                        }
+
+                            .content .wrapper .profile .table_resume .tbody_resume .tr_resume .td_resume .row {
+                                clear: both;
+                                margin-bottom: 3%;
+                                padding: 2%;
+                                width: 96.2%;
+                                background-color: #fff;
+                            }
+
+
+.profile_img {
+    float: left;
+    width: 80px;
+    height: 90px;
+    border: 1px solid #ccc;
+}
+
+.profile_desc {
+    float: left;
+    margin-left: 2%;
+    width: 165px;
+    font-size: .7em;
+}
+
+    .profile_desc .table_profile_desc {
+        width: 165px;
+    }
+
+        .profile_desc .table_profile_desc .tbody_profile_desc {
+        }
+
+            .profile_desc .table_profile_desc .tbody_profile_desc .tr_profile_desc {
+            }
+
+                .profile_desc .table_profile_desc .tbody_profile_desc .tr_profile_desc .td_left_profile_desc {
+                    vertical-align: top;
+                    text-align: right;
+                }
+
+                .profile_desc .table_profile_desc .tbody_profile_desc .tr_profile_desc .td_right_profile_desc {
+                    width: 100%;
+                    -ms-word-break: break-all;
+                    -ms-word-wrap: break-word;
+                    word-wrap: break-word;
+                    word-break: break-all;
+                }
+
+.profile_complete {
+    width: 100%;
+    clear: both;
+    margin-top: 3%;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 .footer {
-    width: 100%;
-    margin: auto;
     clear: both;
+    margin: auto;
+    width: 100%;
     background-color: #000;
     background-repeat: no-repeat;
 }
+
     .footer .wrapper {
-        width: 1024px;
-        margin: auto;
         clear: both;
+        margin: auto;
+        width: 1024px;
     }
+
         .footer .wrapper p {
-            font-size: .75em;
             padding: 2em;
+            font-size: .75em;
         }
-    
-
-

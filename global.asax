@@ -18,6 +18,7 @@
         routes.MapPageRoute("signup", "Signup", "~/signup.aspx");
         routes.MapPageRoute("forgot", "Forgot", "~/forgot.aspx");
 
+        routes.MapPageRoute("privacy", "Privacy", "~/privacy.aspx");
         routes.MapPageRoute("error", "Error", "~/error.aspx");
         routes.MapPageRoute("404", "404", "~/404.aspx");
 

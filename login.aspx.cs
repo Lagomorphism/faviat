@@ -25,7 +25,10 @@ public partial class login : System.Web.UI.Page
             case "btn_login":
                 int accound_id = BusinessLayer.Login(txt_username.Text, txt_password.Text);
                 if (accound_id != 0)
+                {
+                    Session[Constant.ACCOUNT_ID] = accound_id;
                     Response.RedirectToRoute("Home");
+                }
                 else
                 {
                     StringBuilder sb = new StringBuilder();
